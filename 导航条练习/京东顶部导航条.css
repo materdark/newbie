@@ -1,0 +1,62 @@
+.top_bar_wrapper{
+	width: 100%;
+	background-color: #E3E4E5;
+	border-bottom: 1px red solid;
+	line-height: 30px;
+}
+.top_tar{
+	width: 1190px;
+	margin: 0 auto;
+}
+.top_tar a:hover{
+	color: red;
+}
+.location{
+	float: left;
+}
+.location .city_list{
+	/* 开始时是隐藏的 */
+	display: none;
+	margin-top: 20px;
+	width: 325px;
+	height: 436px;
+	background-color: white;
+	/* 生成一个仅为泾渭分明的边界 */
+	border: 1px solid rgb(204,204,204);
+}
+/* 这句话是当location起作用时 city_list的变化 */
+.location:hover .city_list{
+	/* 设置绝对定位，脱离文档流，使其不占据页面位置 */
+	position: absolute;
+	/* 设置阴影效果 */
+	box-shadow: 0 2px 2px;
+	display: block;
+}
+.location:hover{
+	background-color: white;
+}
+.shortcut{
+	float: right;
+}
+.clearfix::before,
+.clearfix::after{
+	content: "";
+	display: table;
+    clear: both;
+}
+.shortcut li{
+	float: left;
+	margin: 10px;
+	
+}
+
+#red{
+	color: red;
+}
+body{
+	font-size: 14px;
+	font-family: "arial narrow";
+}
+.location i{
+	color: red;
+}
