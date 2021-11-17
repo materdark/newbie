@@ -1,0 +1,47 @@
+/* 轮播图具有轮流切换的作用 */
+/* 设置图片的容器 */
+/* 开启相对定位以后，子元素包括此元素本身会以此作为定位点*/
+.img_list{
+	width: 239px;
+	height: 120px;
+	margin: 100px auto;
+	position: relative;
+}
+/* 通过设置绝对定位，使得所有元素层层上浮依次固定到一个位置 */
+.img_list li{
+	position: absolute;
+}
+/* 通过修改指定元素的层级来显示指定的图片*/
+.img_list li:nth-child(1){
+	z-index: 1;
+}
+/* 设置为最高层级，就不会被覆盖了*/
+.pointer{
+	position: absolute;
+	z-index: 999;
+	/* 以祖先元素imh_list为定位点，向下平移 */
+	left: 5px;
+	top: 105px;
+}
+.pointer a{
+	/* 行内元素a无法设置宽高，
+	设置为行内块元素可以兼具行内元素与块元素的特点 */
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	float: left;
+	/* 元素之间设置间距2px */
+	margin-left: 2px;
+	background-color: rgba(255, 255, 255, .4);
+	/* 画圆，这个按照课程中的画法，按照网页源代码调出来的有点问题 */
+	background-clip: content-box;
+	/* 设置边界为3px厚的透明实线 */
+	border: 2px transparent solid;
+	/* 设置为圆形样式 */
+	border-radius: 50%;
+}
+.pointer:nth-child(1),
+.pointer a:hover{
+	background-color: #fff;
+	border: 3px rgba(0, 0, 0, .1) solid;
+}
